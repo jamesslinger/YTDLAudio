@@ -1,0 +1,242 @@
+#nav-brand {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+#navbarNav a {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+@media (max-width: 990px) {
+    #nav-brand {
+        position: relative;
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+
+    #navbarNav a {
+        position: relative;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+#nav :hover {
+    color: black;
+}
+
+/* Body etc */
+body {
+    background: #4e89ae;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color:#212121;
+    text-align: center;
+}
+
+.title {
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2.4rem;
+    margin: 50px auto 30px;
+    color:#FFF;
+    font-weight:500;
+}
+
+.title h3, h4 {
+    color:#FFF;
+    font-weight:500;
+}
+
+.title p, h5, h6 {
+    color: #FFF;
+    font-size: 1.2rem;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#source-input > form > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+@media (max-width: 900px) {
+
+    #source-input .card {
+        width: 97%;
+        padding: 20px 5px;
+        margin-bottom: 20px;
+    }
+
+    #source-input > form > div {
+        padding: 0;
+    }
+
+    .input-group-text {
+        font-size: 0.8rem;
+    }
+}
+
+.btn-primary {
+    width: auto;
+    background-color: #4e89ae;
+    border-color: #4e89ae;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: green;
+    border-color: green;
+}
+
+.btn-secondary {
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: black;
+}
+
+.results h3 {
+    color:#FFF;
+    font-weight:500;
+}
+
+.content {
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 10px;
+    width: 56%;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 2px 4px rgba(100,100,100,.1);
+}
+
+.results-card {
+    margin: 1% auto;
+    padding: 2% auto;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        text-align: center;
+        position: static;
+    }
+
+    .results-card {
+    margin: 1% auto;
+    padding: auto;
+    }
+}
+
+.card h2 {
+    font-size:21px;
+    font-weight:500;
+}
+
+.card h2 a {
+    color:#CC0000;
+    text-decoration:none;
+}
+
+.card .text {
+    color:#212121;
+    margin-top:20px;
+    font-size:15px;
+    line-height:22px;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4e89ae;
+    color: white;
+    text-align: center;
+    margin-top: 1%;
+}
+
+footer p {
+    font-size: 1.1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: black;
+}
+
+.track-thumb {
+    max-width: 100%;
+    height: auto;
+    margin: 2% auto;
+    padding: 2% auto;
+}
+
+
+#track-title {
+    color: #fff;
+    margin: 0 auto 2%;
+    padding 2% auto;
+}
+
+
+.select-btn {
+    margin: auto;
+    padding-top: 5px;
+    text-align: center;
+
+}
+
+.modal-body h4 {
+    color: black;
+    font-size: 1.6rem;
+    padding: 20px 0;
+}
+
+.modal-body h6 {
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 0 5px;
+    max-width: 95%;
+    font-weight: 600;
+}
+
+#url_error {
+    padding-top: 10px;
+}
+
+#dl-notice {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0 50px;
+}

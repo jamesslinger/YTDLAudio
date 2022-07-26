@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+<head>
+    <title>{% block title %} {% endblock %} Search</title>
+</head>
+
+{% block content %}
+
+        <div class="title">
+            <p>Download just the audio from your favorite YouTube videos.</p>
+            <p>Enter the video URL below to see a list of available MP3's.</p>
+        </div>
+        <div id="source-input">
+            <form class="row card container-fluid" action="{{ url_for('results') }}" method="POST">
+                <div class="col input-group mb-3 justify-content-md-center">
+                    <span class="col-lg-3 input-group-text" id="basic-addon3">Source URL:</span>
+                    <input name="url" type="text" class="form-control" id="basic-url">
+                </div>
+                <button class="btn btn-outline-secondary submit-btn" type="submit">Go!</button>
+                <span id="url_error">{{ error }}</span>
+            </form>
+        </div>
+
+{% endblock %}

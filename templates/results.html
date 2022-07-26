@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+<head><title>{% block title %} Results {% endblock %}</title></head>
+
+{% block content %}
+
+<div class="title results">
+    <h3>Results</h3>
+    <p>Download your selected audio file below</p>
+</div>
+<div class="content">
+    <div class="thumb-wrapper">
+        <img class="img-fluid track-thumb" src="{{ all_streams[0].thumbnail|default('static/images/music.png')}}" alt="Thumbnail-img">
+        <h6 id="track-title">{{ all_streams[0].track_name|default('Track name') }}</h6>
+    </div>
+
+    {% for stream in all_streams %}
+
+    <form id="stream_info{{ stream.id }}" class="card results-card justify-content-md-center" action="{{ url_for('download') }}" method="POST">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-3"><strong>Bitrate</strong><br>{{ stream.bitrate }}</div>
+                <div class="col-lg-3"><strong>Filesize</strong><br>{{ stream.filesize }}</div>
+                <div class="col-lg-3"><strong>Duration</strong><br>{{ stream.duration }}</div>
+                <input type="hidden" name="track_id" value="{{ stream.id }}">
+                <input type="hidden" name="url" value="{{ stream.source_url }}">
+                <div class="col-lg-3 col-md-6 select-btn">
+                    <a type="button" class="btn btn-outline-secondary d-grid col-8 mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ stream.id }}">Select</a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{ stream.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" data-bs-target="#staticBackdrop{{ stream.id }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="modal{{ stream.id }}">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                      <div class="modal-body mx-auto">
+                          <h4>{{ stream.track_name }}</h4>
+                          <hr>
+                          <h6><br>Click Below To Download</h6>
+                          <div id="dl-notice">
+                              <p>(Note: Large files may take longer to appear, depending on your network speed.)</p>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary col" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary col dl-btn" data-bs-target="#staticBackdrop{{ stream.id }}">Download</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
