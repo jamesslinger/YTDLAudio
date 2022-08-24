@@ -202,6 +202,8 @@ footer a:hover {
     height: auto;
     margin: 2% auto;
     padding: 2% auto;
+    border-radius: 20px;
+    border: 10px solid white;
 }
 
 
