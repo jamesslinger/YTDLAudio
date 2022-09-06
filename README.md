@@ -1,4 +1,4 @@
-#YTDLAudio
+# YTDLAudio - get the audio from any YouTube video in MP3 format
 
 This is one of my first personal projects that I wanted to do. I wanted an easy & quick way to get an MP3 track from a YouTube video onto my phone so I could play it to my son (who's 20 months old at time of writing this) at bedtime. It's relaxing Disney music so works well but I found it frustrating waiting for the adverts every night.
 
