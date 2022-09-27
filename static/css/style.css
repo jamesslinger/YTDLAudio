@@ -25,12 +25,14 @@
         color: #fff;
         font-weight: 300;
         padding-bottom: 20px;
+        left: 0;
     }
 
     #navbarNav a {
         position: relative;
         color: #fff;
         font-size: 1.2rem;
+        right: 0;
     }
 
     .navbar-toggler {
@@ -94,7 +96,7 @@ body {
 @media (max-width: 900px) {
 
     #source-input .card {
-        width: 97%;
+        width: 95%;
         padding: 20px 5px;
         margin-bottom: 20px;
     }
@@ -105,6 +107,18 @@ body {
 
     .input-group-text {
         font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    #source-input .card {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1400px) {
+    #source-input .card {
+        width: 40%;
     }
 }
 
@@ -140,14 +154,12 @@ body {
 .card {
     background: #fff;
     padding: 40px 10px;
-    width: 50%;
+    width: 65%;
     margin: 20px auto 0 auto;
     box-shadow: 0 2px 4px rgba(100,100,100,.1);
 }
 
-.input-card {
-    /*width: 50%;*/
-}
+
 
 .results-card {
     margin: 1% auto;
