@@ -11,9 +11,9 @@
             <p>Enter the video URL below to see a list of available MP3's.</p>
         </div>
         <div id="source-input">
-            <form class="row card container-fluid" action="{{ url_for('results') }}" method="POST">
-                <div class="col input-group mb-3 justify-content-md-center">
-                    <span class="col-lg-3 input-group-text" id="basic-addon3">Source URL:</span>
+            <form class="row card input-card" action="{{ url_for('results') }}" method="POST">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-10 input-group justify-content-md-center">
+                    <span class="col-lg-3 input-group-text" id="basic-addon3">Video URL:</span>
                     <input name="url" type="text" class="form-control" id="basic-url">
                 </div>
                 <button class="btn btn-outline-secondary submit-btn" type="submit">Go!</button>

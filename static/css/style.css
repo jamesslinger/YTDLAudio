@@ -68,20 +68,26 @@ body {
 
 .title h3, h4 {
     color:#FFF;
-    font-weight:500;
+    font-weight:600;
+    font-size: 2rem;
 }
 
 .title p, h5, h6 {
     color: #FFF;
     font-size: 1.2rem;
     max-width: 80%;
-    margin: auto;
+    margin: 1rem auto;
     text-align: center;
 }
+
 
 #source-input > form > div {
     padding-left: 0;
     padding-right: 0;
+}
+
+.submit-btn {
+    margin-top: 0.5rem;
 }
 
 
@@ -134,14 +140,19 @@ body {
 .card {
     background: #fff;
     padding: 40px 10px;
-    width: 56%;
+    width: 50%;
     margin: 20px auto 0 auto;
     box-shadow: 0 2px 4px rgba(100,100,100,.1);
+}
+
+.input-card {
+    /*width: 50%;*/
 }
 
 .results-card {
     margin: 1% auto;
     padding: 2% auto;
+    width: 80%;
 }
 
 @media (max-width: 1000px) {
@@ -153,6 +164,18 @@ body {
     .results-card {
     margin: 1% auto;
     padding: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .results-card {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .results-card {
+        width: 50%;
     }
 }
 
@@ -200,7 +223,7 @@ footer a:hover {
 .track-thumb {
     max-width: 100%;
     height: auto;
-    margin: 2% auto;
+    margin: auto;
     padding: 2% auto;
     border-radius: 20px;
     border: 10px solid white;
@@ -209,7 +232,7 @@ footer a:hover {
 
 #track-title {
     color: #fff;
-    margin: 0 auto 2%;
+    margin: 1rem auto 1rem;
     padding: 2% auto;
 }
 
