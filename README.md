@@ -4,7 +4,7 @@ This is one of my first personal projects that I wanted to do. I wanted an easy 
 
 I've utilised my knowledge of Python with Flask and a library called Pytube to create a simple landing page with a URL input that then shows the available audio streams on a 2nd page. I've recently been learning how to use Bootstrap 5 so have implemented the design with that using a modal popup to confirm the download.
 
-Thanks for visting and please feel free to drop me a message with any questions.
+Thanks for visiting and please feel free to drop me a message with any questions.
 
 I'm excited to move onto the next project and continue to learn, improve and grow as a developer.
 
