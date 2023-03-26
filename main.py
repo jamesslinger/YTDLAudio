@@ -23,7 +23,7 @@ def results():
         session['link'] = request.form.get('url')
     try:
         url = YouTube(session['link'])
-        # url.check_availability()
+        url.check_availability()
         source_url = request.form["url"]
         track_streams = AudioStream().fetch_streams(source_url)
         return render_template("results.html", all_streams=track_streams, url=url, year=current_year)
