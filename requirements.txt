@@ -18,3 +18,4 @@ urllib3==1.26.15
 Werkzeug==2.2.3
 yarg==0.1.9
 wheel==0.40.0
+setuptools==67.6.0
