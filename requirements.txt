@@ -17,5 +17,6 @@ requests==2.28.2
 urllib3==1.26.15
 Werkzeug==2.2.3
 yarg==0.1.9
-wheel==0.40.0
+pip==23.0.1
 setuptools==67.6.0
+wheel==0.40.0
