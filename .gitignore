@@ -1,2 +1,7 @@
 __pycache__
 .idea
+Lib
+Scripts
+Include
+venv
+pyvenv.cfg
