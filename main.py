@@ -48,7 +48,7 @@ def download():
             return send_file(
                 buffer,
                 as_attachment=True,
-                download_name=f"{track.title}.mp3",
+                download_name=f"{streams.author}-{track.title}.mp3",
                 mimetype="audio/mpeg",
             )
         except:

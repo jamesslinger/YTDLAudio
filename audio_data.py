@@ -4,6 +4,7 @@ from pytube import YouTube
 # noinspection PyMethodMayBeStatic
 class AudioStream:
     def __init__(self):
+        self.artist = "<Artist>-"
         self.track_name = "<Track Name>"
         self.id = None
         self.duration = None
@@ -20,6 +21,7 @@ class AudioStream:
             stream_item = AudioStream()
             stream_item.source_url = url
             stream_item.thumbnail = yt_data.thumbnail_url
+            stream_item.artist = yt_data.author
             stream_item.track_name = yt_data.title
             duration_calc = str(yt_data.length / 60).split('.')
             stream_mins = int(duration_calc[0])
