@@ -1,6 +1,7 @@
 from pytube import YouTube
 
 
+# noinspection PyMethodMayBeStatic
 class AudioStream:
     def __init__(self):
         self.track_name = "<Track Name>"
@@ -28,11 +29,10 @@ class AudioStream:
             stream_item.bitrate = stream.abr
             stream_item.filesize = f"{round(stream.filesize / 1000 / 1000)}MB"
             all_streams.append(stream_item)
-        all_streams.sort(key=lambda x: x.filesize, reverse=True)
+        all_streams.sort(key=lambda x: x.filesize, reverse=False)
         return all_streams
 
     def download_track(self, url, track_id):
         yt_data = YouTube(url)
         dl_track = yt_data.streams.get_by_itag(track_id)
-        print(dl_track.title)
         return dl_track.download(filename=f"{dl_track.title}.mp3")

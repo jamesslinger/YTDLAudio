@@ -97,7 +97,7 @@ body {
 
     #source-input .card {
         width: 95%;
-        padding: 20px 5px;
+        padding: 15px;
         margin-bottom: 20px;
     }
 
@@ -153,7 +153,7 @@ body {
 
 .card {
     background: #fff;
-    padding: 40px 10px;
+    padding: 15px;
     width: 65%;
     margin: 20px auto 0 auto;
     box-shadow: 0 2px 4px rgba(100,100,100,.1);
@@ -188,6 +188,11 @@ body {
 @media (min-width: 1300px) {
     .results-card {
         width: 50%;
+    }
+
+    .track-thumb {
+        width: 40vw;
+        max-width: 760px;
     }
 }
 
@@ -233,12 +238,12 @@ footer a:hover {
 }
 
 .track-thumb {
-    max-width: 100%;
+    width: 70vw;
     height: auto;
     margin: auto;
     padding: 2% auto;
     border-radius: 20px;
-    border: 10px solid white;
+    border: 6px solid white;
 }
 
 
@@ -256,6 +261,11 @@ footer a:hover {
 
 }
 
+.modal-body {
+    padding: 16px 16px 0;
+    margin: 0;
+}
+
 .modal-body h4 {
     color: black;
     font-size: 1.4rem;
@@ -266,7 +276,7 @@ footer a:hover {
     color: black;
     font-size: 1.2rem;
     text-align: center;
-    padding: 0 0 5px;
+    padding: 5px 0 0px;
     max-width: 95%;
     font-weight: 600;
     margin: auto;
@@ -278,6 +288,73 @@ footer a:hover {
 
 #dl-notice {
     font-size: 0.9rem;
+    margin: 0 0 10px;
+    padding: 0 50px 15px;
+}
+
+#dl-wait {
+    visibility: hidden;
+}
+
+.file-msg {
     margin: 0;
-    padding: 0 50px;
+}
+
+.modal-footer {
+    border-top: none;
+    min-height: 60px;
+}
+
+hr {
+    margin: 1px;
+}
+
+@media (max-width: 600px) {
+    #basic-addon3 {
+        display: none;
+    }
+    .form-control {
+        border-radius: 0;
+    }
+
+    .title h1 {
+        font-size: 2.2rem;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* SPINNER */
+
+.spinner-border {
+    width: 4rem;
+    height: 4rem;
+    margin: 20px auto;
+}
+
+/* MODAL CHANGE */
+
+.modal-change-hide {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.modal-change-h6 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    content: '<br>Downloading';
+}
+
+.modal-change-fm {
+    font-size: 1.2rem;
+    content: 'Please wait...';
 }

@@ -29,28 +29,30 @@
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+        <!-- Click to Download Modal -->
         <div class="modal fade" id="staticBackdrop{{ stream.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" data-bs-target="#staticBackdrop{{ stream.id }}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content" id="modal{{ stream.id }}">
-                    <div class="modal-header">
+<!--                    <div class="modal-header">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                      <div class="modal-body mx-auto">
+                    </div>-->
+                      <div class="modal-body">
                           <h4>{{ stream.track_name }}</h4>
                           <hr>
-                          <h6><br>Click Below To Download</h6>
+                          <h6 class="h6-msg"><br>Click Below To Download</h6>
                           <div id="dl-notice">
-                              <p>(Note: Files larger than approx 8MB may take longer to begin the download.)</p>
+                              <p class="file-msg">Files may take between 30 seconds to 2 minutes to be ready.</p>
                           </div>
+                          <hr>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary col" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary col close-btn" data-bs-dismiss="modal">Close</button>
                           <button type="submit" class="btn btn-primary col dl-btn" data-bs-target="#staticBackdrop{{ stream.id }}">Download</button>
                       </div>
                 </div>
             </div>
         </div>
+
     </form>
 
     {% endfor %}
