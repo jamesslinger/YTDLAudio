@@ -47,12 +47,14 @@
 
 /* Body etc */
 body {
-    background: #4e89ae;
+
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
-    color:#212121;
+    color: #212121;
     text-align: center;
+    background: #4e89ae;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-stripes-light.png");
 }
 
 .title {
@@ -218,7 +220,6 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #4e89ae;
     color: white;
     text-align: center;
     margin-top: 10px;
