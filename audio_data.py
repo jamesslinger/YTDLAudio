@@ -10,6 +10,7 @@ class AudioStream:
         self.duration = None
         self.bitrate = None
         self.filesize = None
+        self.filebytes = None
         self.thumbnail = "static/images/music.png"
         self.source_url = None
 
@@ -28,10 +29,17 @@ class AudioStream:
             stream_secs = int(float('0.' + duration_calc[1])*60)
             stream_item.duration = f"{stream_mins} mins {stream_secs} secs"
             stream_item.id = stream.itag
-            stream_item.bitrate = stream.abr
-            stream_item.filesize = f"{round(stream.filesize / 1000 / 1000)}MB"
+            if type(stream.abr) == type(None):
+                stream_item.bitrate = "N/A"
+            else:
+                stream_item.bitrate = stream.abr
+            stream_item.filebytes = stream.filesize
+            if int(stream.filesize) < 1000000:
+                stream_item.filesize = f"{(str(stream.filesize)[0:3])}KB"
+            else:
+                stream_item.filesize = f"{round(stream.filesize / 1000 / 1000)}MB"
             all_streams.append(stream_item)
-        all_streams.sort(key=lambda x: x.filesize, reverse=False)
+        all_streams.sort(key=lambda x: x.filebytes, reverse=False)
         return all_streams
 
     def download_track(self, url, track_id):

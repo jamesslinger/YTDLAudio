@@ -11,7 +11,7 @@
 <div class="content">
     <div class="thumb-wrapper">
         <img class="img-fluid track-thumb" src="{{ all_streams[0].thumbnail|default('static/images/music.png')}}" alt="Thumbnail-img">
-        <h6 id="track-title">{{ all_streams[0].artist }} - {{ all_streams[0].track_name|default('Track name') }}</h6>
+        <h6 id="track-title">{{ all_streams[0].track_name|default('Track name') }}</h6>
     </div>
 
     {% for stream in all_streams %}
@@ -34,7 +34,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content" id="modal{{ stream.id }}">
                       <div class="modal-body">
-                          <h4>{{ stream.artist }} - {{ stream.track_name }}</h4>
+                          <h4>{{ stream.track_name }}</h4>
                           <hr>
                           <h6 class="h6-msg"><br>Click Below To Download</h6>
                           <div id="dl-notice">

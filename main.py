@@ -27,7 +27,8 @@ def results():
             source_url = request.form["url"]
             track_streams = AudioStream().fetch_streams(source_url)
             return render_template("results.html", all_streams=track_streams, url=url, year=current_year)
-        except:
+        except Exception as e:
+            print(e)
             flash(f'Sorry, the link "{track_link}" caused an error. Please try again.')
             return redirect(url_for('home'))
     else:
@@ -48,10 +49,11 @@ def download():
             return send_file(
                 buffer,
                 as_attachment=True,
-                download_name=f"{streams.author}-{track.title}.mp3",
+                download_name=f"{track.title}.mp3",
                 mimetype="audio/mpeg",
             )
-        except:
+        except Exception as e:
+            print(e)
             flash(f'Sorry, there was a problem with the download. Please try again.')
             return redirect(url_for('home'))
 
