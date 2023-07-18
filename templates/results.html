@@ -11,7 +11,8 @@
 <div class="content">
     <div class="thumb-wrapper">
         <img class="img-fluid track-thumb" src="{{ all_streams[0].thumbnail|default('static/images/music.png')}}" alt="Thumbnail-img">
-        <h6 id="track-title">{{ all_streams[0].track_name|default('Track name') }}</h6>
+        <h6 id="track-title">{{ all_streams[0].track_name }}</h6>
+
     </div>
 
     {% for stream in all_streams %}
