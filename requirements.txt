@@ -21,4 +21,4 @@ yarg==0.1.9
 pip==23.2.1
 setuptools==68.1.2
 wheel==0.41.2
-git+https://github.com/jamesslinger/pytube.git
+pytube==15.0.0

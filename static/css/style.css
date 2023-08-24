@@ -120,7 +120,7 @@ body {
 
 @media (min-width: 1400px) {
     #source-input .card {
-        width: 40%;
+        max-width: 800px;
     }
 }
 
@@ -166,7 +166,7 @@ body {
 .results-card {
     margin: 1% auto;
     padding: 2% auto;
-    /*width: 80%;*/
+    max-width: 735px;
 }
 
 @media (max-width: 1000px) {
@@ -194,7 +194,8 @@ body {
 
     .track-thumb {
         width: 40vw;
-        max-width: 760px;
+        max-width: 735px;
+        object-fit: contain;
     }
 }
 
@@ -245,6 +246,7 @@ footer a:hover {
     padding: 2% auto;
     border-radius: 20px;
     border: 6px solid white;
+    object-fit: contain;
 }
 
 
