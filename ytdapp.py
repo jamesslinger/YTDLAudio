@@ -4,7 +4,10 @@ from pytube import YouTube
 from io import BytesIO
 import datetime as dt
 import os
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ["SECRET_KEY"]
@@ -59,4 +62,4 @@ def download():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
